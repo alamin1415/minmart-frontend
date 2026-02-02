@@ -1,3 +1,203 @@
+src/
+└── app/
+    ├── layout.tsx                 # Root layout (theme, providers)
+    ├── page.tsx                   # Entry (redirect / home)
+    ├── loading.tsx
+    ├── error.tsx
+    ├── not-found.tsx
+    ├── middleware.ts
+
+
+
+
+app/
+├── (public)/
+│   ├── layout.tsx                 # Navbar, footer
+│   ├── page.tsx                   # Home
+│   ├── location/
+│   │   └── page.tsx               # Select delivery location
+│   ├── search/
+│   │   └── page.tsx
+│   ├── category/
+│   │   └── [slug]/
+│   │       └── page.tsx
+│   ├── product/
+│   │   └── [id]/
+│   │       └── page.tsx
+│   ├── offers/
+│   │   └── page.tsx
+│   └── subscription/
+│       └── page.tsx
+
+
+app/
+├── (auth)/
+│   ├── layout.tsx
+│   ├── login/
+│   │   └── page.tsx
+│   ├── otp/
+│   │   └── page.tsx
+│   ├── register/
+│   │   └── page.tsx
+│   └── logout/
+│       └── page.tsx
+
+
+
+app/
+├── (user)/
+│   ├── layout.tsx                 # Bottom nav
+│   ├── cart/
+│   │   └── page.tsx
+│   ├── checkout/
+│   │   └── page.tsx
+│   ├── orders/
+│   │   ├── page.tsx
+│   │   └── [orderId]/
+│   │       └── page.tsx
+│   ├── addresses/
+│   │   └── page.tsx
+│   ├── profile/
+│   │   └── page.tsx
+│   └── wallet/
+│       └── page.tsx
+
+
+app/
+├── (delivery)/
+│   ├── layout.tsx
+│   ├── dashboard/
+│   │   └── page.tsx
+│   ├── orders/
+│   │   └── page.tsx
+│   ├── order/
+│   │   └── [id]/
+│   │       └── page.tsx
+│   └── earnings/
+│       └── page.tsx
+
+
+
+app/
+├── (admin)/
+│   ├── layout.tsx                 # Admin layout (sidebar + header)
+│   ├── dashboard/
+│   │   └── page.tsx               # Admin dashboard
+│   ├── products/
+│   │   ├── page.tsx               # Products list
+│   │   └── create/
+│   │       └── page.tsx           # Create new product
+│   ├── categories/
+│   │   ├── page.tsx               # Categories list
+│   │   └── create/
+│   │       └── page.tsx           # Add category
+│   ├── inventory/
+│   │   └── page.tsx               # Inventory list
+│   ├── orders/
+│   │   └── page.tsx               # Orders list
+│   ├── users/
+│   │   └── page.tsx               # Users list
+│   ├── stores/
+│   │   └── page.tsx               # Stores list
+│   └── coupons/
+│       └── page.tsx               # Coupons list
+├── components/
+│   ├── ui/
+│   │   ├── Button.tsx
+│   │   ├── Table.tsx
+│   │   └── Input.tsx
+│   └── layout/
+│       ├── Sidebar.tsx
+│       └── Header.tsx
+├── lib/
+│   └── api.ts                      # API helper functions
+├── types/
+│   └── index.ts                    # TypeScript types/interfaces
+└── styles/
+    └── globals.css
+
+
+
+
+app/
+├── api/
+│   ├── auth/
+│   │   └── route.ts
+│   ├── products/
+│   │   └── route.ts
+│   ├── cart/
+│   │   └── route.ts
+│   ├── orders/
+│   │   └── route.ts
+│   └── payments/
+│       └── route.ts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
