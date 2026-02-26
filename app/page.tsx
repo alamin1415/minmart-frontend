@@ -16,8 +16,11 @@ export default function HomePage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
 
+  // Environment variable
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
   useEffect(() => {
-    fetch('http://localhost:3000/products')
+    fetch(`${API_URL}/products`)
       .then(res => res.json())
       .then(data => {
         setProducts(data);
@@ -27,7 +30,7 @@ export default function HomePage() {
         console.error(err);
         setLoading(false);
       });
-  }, []);
+  }, [API_URL]);
 
   if (loading) return <p className="text-center mt-10">Loading products...</p>;
 
