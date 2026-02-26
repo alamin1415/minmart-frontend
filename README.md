@@ -1,236 +1,74 @@
-src/
-└── app/
-    ├── layout.tsx                 # Root layout (theme, providers)
-    ├── page.tsx                   # Entry (redirect / home)
-    ├── loading.tsx
-    ├── error.tsx
-    ├── not-found.tsx
-    ├── middleware.ts
+# 🛒 MinMart Frontend (Next.js)
 
+MinMart Frontend is a modern, scalable e-commerce web application built with
+**Next.js 13**.  
+It works seamlessly with the MinMart Backend API to provide a full-featured
+shopping experience for customers, delivery personnel, and admin users.
 
+---
 
+## 🌐 Features
 
-app/
-├── (public)/
-│   ├── layout.tsx                 # Navbar, footer
-│   ├── page.tsx                   # Home
-│   ├── location/
-│   │   └── page.tsx               # Select delivery location
-│   ├── search/
-│   │   └── page.tsx
-│   ├── category/
-│   │   └── [slug]/
-│   │       └── page.tsx
-│   ├── product/
-│   │   └── [id]/
-│   │       └── page.tsx
-│   ├── offers/
-│   │   └── page.tsx
-│   └── subscription/
-│       └── page.tsx
+### Public (Guest / Home)
 
+- Browse products, categories, and offers
+- Search products by name, category, or tags
+- Select delivery location
+- Subscription page for newsletters and promotions
+- Product detail pages with images, inventory status, and pricing
 
-app/
-├── (auth)/
-│   ├── layout.tsx
-│   ├── login/
-│   │   └── page.tsx
-│   ├── otp/
-│   │   └── page.tsx
-│   ├── register/
-│   │   └── page.tsx
-│   └── logout/
-│       └── page.tsx
+### Authentication (Auth)
 
+- Login (email/password) and OTP verification
+- Registration for new users
+- Secure logout flow
+- JWT-based authentication integrated with backend
 
+### Customer (User)
 
-app/
-├── (user)/
-│   ├── layout.tsx                 # Bottom nav
-│   ├── cart/
-│   │   └── page.tsx
-│   ├── checkout/
-│   │   └── page.tsx
-│   ├── orders/
-│   │   ├── page.tsx
-│   │   └── [orderId]/
-│   │       └── page.tsx
-│   ├── addresses/
-│   │   └── page.tsx
-│   ├── profile/
-│   │   └── page.tsx
-│   └── wallet/
-│       └── page.tsx
+- Persistent shopping cart
+- Checkout workflow with guest or logged-in accounts
+- Order history and order tracking
+- Manage addresses, profile, and wallet
+- Responsive bottom navigation for mobile-first experience
 
+### Delivery Personnel (Delivery)
+
+- Dashboard with assigned orders
+- Track and update order status
+- View earnings and completed deliveries
+
+### Admin Panel
+
+- Admin dashboard overview
+- CRUD management for products, categories, inventory, orders, users, stores,
+  and coupons
+- Sidebar + header layout for easy navigation
+- Advanced analytics and inventory control integration
+
+---
+
+## 🛠 Tech Stack
+
+- **Framework:** Next.js 13 (App Router)
+- **Language:** TypeScript
+- **Styling:** CSS Modules / Global Styles
+- **Components:** Reusable UI components (Button, Table, Input, Sidebar, Header)
+- **API Integration:** Axios / Fetch with backend REST API (`src/api/*`)
+- **Routing:** Nested routes with layouts for auth, user, delivery, and admin
+
+---
+
+## 📂 Project Structure (App Router)
 
 app/
-├── (delivery)/
-│   ├── layout.tsx
-│   ├── dashboard/
-│   │   └── page.tsx
-│   ├── orders/
-│   │   └── page.tsx
-│   ├── order/
-│   │   └── [id]/
-│   │       └── page.tsx
-│   └── earnings/
-│       └── page.tsx
-
-
-
-app/
-├── (admin)/
-│   ├── layout.tsx                 # Admin layout (sidebar + header)
-│   ├── dashboard/
-│   │   └── page.tsx               # Admin dashboard
-│   ├── products/
-│   │   ├── page.tsx               # Products list
-│   │   └── create/
-│   │       └── page.tsx           # Create new product
-│   ├── categories/
-│   │   ├── page.tsx               # Categories list
-│   │   └── create/
-│   │       └── page.tsx           # Add category
-│   ├── inventory/
-│   │   └── page.tsx               # Inventory list
-│   ├── orders/
-│   │   └── page.tsx               # Orders list
-│   ├── users/
-│   │   └── page.tsx               # Users list
-│   ├── stores/
-│   │   └── page.tsx               # Stores list
-│   └── coupons/
-│       └── page.tsx               # Coupons list
-├── components/
-│   ├── ui/
-│   │   ├── Button.tsx
-│   │   ├── Table.tsx
-│   │   └── Input.tsx
-│   └── layout/
-│       ├── Sidebar.tsx
-│       └── Header.tsx
-├── lib/
-│   └── api.ts                      # API helper functions
-├── types/
-│   └── index.ts                    # TypeScript types/interfaces
-└── styles/
-    └── globals.css
-
-
-
-
-app/
-├── api/
-│   ├── auth/
-│   │   └── route.ts
-│   ├── products/
-│   │   └── route.ts
-│   ├── cart/
-│   │   └── route.ts
-│   ├── orders/
-│   │   └── route.ts
-│   └── payments/
-│       └── route.ts
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+├── (public)/ # Public pages (home, product, category, offers)
+├── (auth)/ # Authentication pages (login, register, OTP)
+├── (user)/ # Customer pages (cart, checkout, orders, profile, wallet)
+├── (delivery)/ # Delivery personnel pages (dashboard, orders, earnings)
+├── (admin)/ # Admin dashboard and management (products, categories, inventory, orders, users, stores, coupons)
+├── components/ # Reusable UI & layout components (Buttons, Tables, Inputs, Sidebar, Header)
+├── lib/ # API helpers (axios/fetch wrappers, endpoints)
+├── types/ # TypeScript interfaces and types
+├── styles/ # Global & component-specific CSS
+└── api/ # Next.js route handlers (auth, products, cart, orders, payments)
