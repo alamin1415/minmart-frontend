@@ -58,17 +58,3 @@ shopping experience for customers, delivery personnel, and admin users.
 - **Routing:** Nested routes with layouts for auth, user, delivery, and admin
 
 ---
-
-## 📂 Project Structure (App Router)
-
-app/
-├── (public)/ # Public pages (home, product, category, offers)
-├── (auth)/ # Authentication pages (login, register, OTP)
-├── (user)/ # Customer pages (cart, checkout, orders, profile, wallet)
-├── (delivery)/ # Delivery personnel pages (dashboard, orders, earnings)
-├── (admin)/ # Admin dashboard and management (products, categories, inventory, orders, users, stores, coupons)
-├── components/ # Reusable UI & layout components (Buttons, Tables, Inputs, Sidebar, Header)
-├── lib/ # API helpers (axios/fetch wrappers, endpoints)
-├── types/ # TypeScript interfaces and types
-├── styles/ # Global & component-specific CSS
-└── api/ # Next.js route handlers (auth, products, cart, orders, payments)
