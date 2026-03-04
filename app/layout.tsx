@@ -1,3 +1,4 @@
+// app/layout.tsx
 import Header from './components/Header';
 import Footer from './components/Footer';
 import type { Metadata } from 'next';
@@ -31,9 +32,20 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Fixed Header */}
         <Header />
+
+        {/* Fixed Category bar below Header */}
         <Cetagory />
-        {children}
+
+        {/* Scrollable main content */}
+        <main className="mt-28">
+          {' '}
+          {/* Header height (h-16) + Cetagory height (h-12) = mt-28 */}
+          {children}
+        </main>
+
+        {/* Footer at the bottom */}
         <Footer />
       </body>
     </html>

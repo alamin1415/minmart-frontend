@@ -1,15 +1,15 @@
 import Link from 'next/link';
+
 export default function Cetagory() {
   return (
-    <div className="w-full h-12 flex items-center justify-center gap-6 px-4 bg-gray-100 text-black text-sm font-medium border-2 border-pink-200">
+    <div className="w-full h-12 flex items-center justify-center gap-6 px-4 bg-gray-100 text-black text-sm font-medium border-2 border-pink-200 fixed top-16 left-0 z-40">
       {/* Logo / All Button */}
-
       <Link href="/">
         <button className="px-3 py-1 bg-pink-500 text-white rounded-md hover:bg-pink-600">
           All
         </button>
       </Link>
-      
+
       {/* Category Buttons */}
       <button className="px-3 py-1 rounded-md hover:bg-pink-100">Cafe</button>
       <button className="px-3 py-1 rounded-md hover:bg-pink-100">Home</button>

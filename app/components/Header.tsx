@@ -2,7 +2,7 @@
 
 export default function Header() {
   return (
-    <header className="w-full h-16 flex items-center px-6 shadow-md bg-white">
+    <header className="w-full h-16 flex items-center px-6 shadow-md bg-white fixed top-0 left-0 z-50">
       <h1 className="text-3xl md:text-4xl font-extrabold tracking-wide">
         <span className="text-blue-600">MIN</span>
         <span className="text-red-500">MART</span>
