@@ -40,7 +40,6 @@ export default function RootLayout({
 
         {/* Scrollable main content */}
         <main className="mt-28">
-          {' '}
           {/* Header height (h-16) + Cetagory height (h-12) = mt-28 */}
           {children}
         </main>
